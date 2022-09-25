@@ -1,4 +1,4 @@
-package ru.netology.graphics.image;
+package image;
 
 public class BadImageSizeException extends Exception {
     public BadImageSizeException(double ratio, double maxRatio) {

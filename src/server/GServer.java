@@ -1,9 +1,9 @@
-package ru.netology.graphics.server;
+package server;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
-import ru.netology.graphics.image.TextColorTwo;
-import ru.netology.graphics.image.TextGraphicsConverter;
+import image.TextColorTwo;
+import image.TextGraphicsConverter;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,8 +1,8 @@
-package ru.netology.graphics.image;
+package image;
 
-public class TextColor implements TextColorSchema {
+public class TextColorTwo implements TextColorSchema {
 
-    final String CHARS = "#$@%*+-\\.";
+    final String CHARS = "MNHQ&OC?7>!;:-.";
 
     @Override
     public char convert(int color) {

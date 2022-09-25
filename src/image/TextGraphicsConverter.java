@@ -1,4 +1,4 @@
-package ru.netology.graphics.image;
+package image;
 
 import java.io.IOException;
 

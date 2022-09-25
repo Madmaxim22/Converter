@@ -1,8 +1,6 @@
-package ru.netology.graphics;
-
-import ru.netology.graphics.image.Converter;
-import ru.netology.graphics.image.TextGraphicsConverter;
-import ru.netology.graphics.server.GServer;
+import image.Converter;
+import image.TextGraphicsConverter;
+import server.GServer;
 
 public class Main {
     public static void main(String[] args) throws Exception {
