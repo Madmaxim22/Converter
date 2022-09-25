@@ -2,22 +2,21 @@ package ru.netology.graphics.server;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
+import ru.netology.graphics.image.TextColorTwo;
 import ru.netology.graphics.image.TextGraphicsConverter;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.InetSocketAddress;
-import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-/**
- * Сервер уже за вас написан, его трогать не надо :)
-*/
 public class GServer {
     public static final int PORT = 8888;
 
-    private HttpServer server;
-    private TextGraphicsConverter converter;
+    private final HttpServer server;
+    private final TextGraphicsConverter converter;
 
     public GServer(TextGraphicsConverter converter) throws Exception {
         if (converter == null) {
@@ -27,6 +26,7 @@ public class GServer {
         this.converter.setMaxHeight(300);
         this.converter.setMaxWidth(300);
         this.converter.setMaxRatio(4);
+        this.converter.setTextColorSchema(new TextColorTwo());
 
         server = HttpServer.create(new InetSocketAddress("localhost", PORT), 0);
         server.createContext("/", this::serveHtml);
